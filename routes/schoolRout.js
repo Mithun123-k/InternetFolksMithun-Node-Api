@@ -4,12 +4,12 @@ const { isAuthenticatedUser } = require('../middleware/auth');
 
 const router = express.Router();
 
-router.route("/school/create").post(isAuthenticatedUser, createSchool)
+router.route("/school").post(isAuthenticatedUser, createSchool)
 
-router.route("/school/get").get(isAuthenticatedUser, getAllSchool)
+router.route("/school").get(isAuthenticatedUser, getAllSchool)
 
 
-router.route("/school/student").get(isAuthenticatedUser, getAllSchoolStudent)
+router.route("/school/students").get(isAuthenticatedUser, getAllSchoolStudent)
 
 
 module.exports = router;

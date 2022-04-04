@@ -3,10 +3,10 @@ const { registerUser, loginUser, logOut, getAllUser, getsingleUser } = require('
 
 const router = express.Router();
 
-router.route("/register").post(registerUser)
-router.route("/login").post(loginUser)
+router.route("/user/signup").post(registerUser)
+router.route("/user/signin").post(loginUser)
 router.route("/logout").get(logOut)
-router.route("/getallusers").get(getAllUser)
-router.route("/getsingleusers/:id").get(getsingleUser)
+router.route("/user").get(getAllUser)
+router.route("/user/:id").get(getsingleUser)
 
 module.exports = router;
