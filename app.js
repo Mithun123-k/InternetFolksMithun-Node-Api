@@ -14,10 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const user = require("./routes/userRoutes")
 const student = require("./routes/studentRoutes");
 const school = require("./routes/schoolRout");
+const role = require("./routes/roleRoute")
 
-app.use("/api/v1", user)
-app.use("/api/v1", student)
-app.use("/api/v1", school)
+app.use( user)
+app.use( student)
+app.use( school)
+app.use( role)
 
 
 
